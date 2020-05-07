@@ -1,8 +1,8 @@
-# malos vision android bridge
+# MALOS Vision Android Bridge
 
 Implementation sample of a Android client  interfaced to Admobilize Malos Vision
 
-## compiling and installing sample
+## Compiling and installing sample
 
 After clone this project, please firts update submodule protos and then conpile it:
 
@@ -13,7 +13,7 @@ git submodule update --init
 
 ## Implementation
 
-### Gradle file
+### gradle file
 
 Set the source path of protos (in this sample, they are in `app/src/main/proto`):
 
@@ -70,7 +70,7 @@ allprojects {
 }
 ```
 
-### Note: Protos
+#### note: proto git submodule
 
 If you want replicate this project in your project, you keep in mind first add the matrix-io protos submodule, with something like:
 
@@ -93,7 +93,6 @@ malosVision.subscribe(new MalosDrive.OnSubscriptionCallBack() {
     }
 });
 ```
-
 
 #### Vision Result proto
 
