@@ -2,10 +2,13 @@
 
 Implementation sample of a Android client  interfaced to Admobilize Malos Vision
 
-# Compiling and installing
+## compiling and installing
 
+```bash
+./gradlew installDebug
+```
 
-# Note: Protos
+### Note: Protos
 
 If you want replicate this project in your project, you keep in mind first add the matrix-io protos submodule, with something like:
 
