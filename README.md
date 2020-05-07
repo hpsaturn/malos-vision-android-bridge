@@ -1,21 +1,23 @@
-# MALOS Vision Android Bridge
+# MALOS Vision Android/Java Bridge
 
-Implementation sample of a Android client  interfaced to Admobilize Malos Vision
+Implementation sample of a Android or JAVA client for interfaced it to Admobilize Malos Vision.
 
 ## Compiling and installing sample
 
-After clone this project, please firts update submodule protos and then conpile it:
+After clone this project, please first update `protos` submodule and then compile and install it:
 
 ```bash
 git submodule update --init
 ./gradlew installDebug
 ```
 
+---
+
 ## Implementation
 
 ### gradle file
 
-Set the source path of protos (in this sample, they are in `app/src/main/proto`):
+Set the path of protos (in this sample, they are in `app/src/main/proto`):
 
 
 ```gradle
@@ -30,7 +32,7 @@ android {
 }
 ```
 
-Add dependencies for protobuf and GRPC:
+Add dependencies for `protobuf` and `GRPC`:
 
 ```gradle
 dependencies {
@@ -72,7 +74,7 @@ allprojects {
 
 #### note: proto git submodule
 
-If you want replicate this project in your project, you keep in mind first add the matrix-io protos submodule, with something like:
+If you want replicate this project in your project, you keep in mind first add the `matrix-io protos submodule`, with something like:
 
 ```bash
 git submodule add https://github.com/matrix-io/protocol-buffers.git app/src/main/proto
@@ -82,7 +84,7 @@ git submodule add https://github.com/matrix-io/protocol-buffers.git app/src/main
 
 #### Connection to MALOS VISION device
 
-If you have a malos vision device provisioned, only put the IP for have a connection and subscribe to Vision events:
+If you have a malos vision device provisioned and running, only put the IP for have a connection and subscribe to Vision events:
 
 ```java
 MalosDrive malosVision = new MalosDrive(MalosTarget.VISION, "192.168.178.53");
@@ -112,7 +114,7 @@ while (it.hasNext()) {
 
 #### Vision Data
 
-From `VisionResult` proto, you can many information, for example this:
+From `VisionResult` proto, you have many information, for example this:
 
 ```java
 void printFaceRecognitionData(VisionResult visionResult) {
